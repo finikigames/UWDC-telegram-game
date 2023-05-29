@@ -8,5 +8,5 @@ app.use(function (req, res, next) {
   req.headers['content-type'] = 'br';
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 app.listen(port);
