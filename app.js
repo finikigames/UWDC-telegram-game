@@ -5,6 +5,7 @@ var cors = require('cors');
 app.use(cors())
 app.use(express.static(__dirname + '/public')); 
 app.use(function (req, res, next) {
+  res.set('Bypass-Tunnel-Reminder', 'text/plain');
   req.headers['content-type'] = 'br';
 });
 

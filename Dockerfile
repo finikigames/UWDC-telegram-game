@@ -1,15 +1,19 @@
 FROM node:9.5-slim
 
-ENV PORT="3000"
-ENV DEBUG="app:*"
+WORKDIR /usr/src/app
 
-RUN mkdir -p /app /app/public
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-COPY public/ /app/public/
-COPY app.js package.json /app/
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --omit=dev
 
-WORKDIR /app
-RUN npm install --unsafe-perm
+# Bundle app source
+COPY . .
 
-EXPOSE 3000 
-CMD /app
+EXPOSE 8080
+
+CMD [ "node", "server.js" ]
