@@ -1,0 +1,31 @@
+version: '3'
+services:
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    environment:
+      CERTBOT_EMAIL: "sanjaplushka@gmail.com"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "7349:7349"
+      - "7350:7350"
+      - "7351:7351"
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./nginx_conf.d:/etc/nginx/user_conf.d
+    links:
+      - nakama
+    depends_on:
+      - nakama
+  web:
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - .:/src
+    command: npm run start:dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      DEBUG: nodejs-docker-express:*
