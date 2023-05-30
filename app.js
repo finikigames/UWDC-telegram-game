@@ -1,6 +1,6 @@
 var express = require('express');
 var https = require("https");
-var fs = request("fs");
+var fs = require("fs");
 var cors = require('cors');
 
 var app = express();
