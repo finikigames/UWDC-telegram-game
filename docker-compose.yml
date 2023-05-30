@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "3001"
   nginx:
     image: jonasal/nginx-certbot:latest
     environment:
