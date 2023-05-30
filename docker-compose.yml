@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
   nginx:
     image: jonasal/nginx-certbot:latest
     environment:
@@ -13,7 +15,7 @@ services:
       - "443:443"
     volumes:
       - nginx_secrets:/etc/letsencrypt
-      - ./nginx_conf.d:/etc/nginx/user_conf.d
+      - ./nginx_conf.d:/etc/nginx/app.conf
     links:
       - app
     depends_on:
