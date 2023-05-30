@@ -18,3 +18,5 @@ services:
       - app
     depends_on:
       - app
+volumes:
+  nginx_secrets: {}
