@@ -1,7 +1,12 @@
 var express = require('express');
 var https = require("https");
+var http = require('http');
 var fs = require("fs");
 var cors = require('cors');
+
+var app = express();
+
+http.createServer(app).listen(80);
 
 var app = express();
 
@@ -17,7 +22,7 @@ https
     },
     app
   )
-  .listen(80, () => {
+  .listen(443, () => {
     console.log("serever is runing at port 80");
   });
 
