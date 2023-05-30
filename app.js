@@ -6,7 +6,6 @@ var cors = require('cors');
 var app = express();
 
 app.use(cors())
-app.use(express.static(__dirname + '/public'));
 
 https
   .createServer(
@@ -21,3 +20,5 @@ https
   .listen(80, () => {
     console.log("serever is runing at port 80");
   });
+
+app.use(express.static(__dirname + '/public'));
