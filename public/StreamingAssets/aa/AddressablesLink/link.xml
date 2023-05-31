@@ -1,8 +1,4 @@
 <linker>
-  <assembly fullname="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="WebGLSupport.WebGLInput" preserve="all" />
-    <type fullname="WebGLSupport.WebGLInputMobile" preserve="all" />
-  </assembly>
   <assembly fullname="Checkers, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Checkers.UI.Views.Implementations.FleeWindow" preserve="all" />
     <type fullname="Checkers.UI.Views.Implementations.LoseWindow" preserve="all" />
@@ -18,6 +14,7 @@
     <type fullname="Main.UI.Views.Implementations.InviteWindow" preserve="all" />
     <type fullname="Main.UI.Views.Implementations.StartWindow" preserve="all" />
     <type fullname="Main.UI.Views.Implementations.WaitForPlayerWindow.WaitForPlayerWindow" preserve="all" />
+    <type fullname="Main.UI.Views.LogoView" preserve="all" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
