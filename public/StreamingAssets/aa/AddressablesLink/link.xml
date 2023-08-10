@@ -16,6 +16,7 @@
   </assembly>
   <assembly fullname="Main, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Main.UI.Views.Implementations.InviteWindow" preserve="all" />
+    <type fullname="Main.UI.Views.Implementations.LeaderboardWindow.LeaderboardWindow" preserve="all" />
     <type fullname="Main.UI.Views.Implementations.StartWindow" preserve="all" />
     <type fullname="Main.UI.Views.Implementations.WaitForPlayerWindow.WaitForPlayerWindow" preserve="all" />
     <type fullname="Main.UI.Views.LogoView" preserve="all" />
